@@ -77,10 +77,12 @@ function loadEnv(filePath) {
 }
 
 function serveStatic(pathname, res) {
-  const cleanPath = pathname === "/" ? "/index.html" : decodeURIComponent(pathname);
+  const cleanPath = pathname === "/"
+    ? "index.html"
+    : decodeURIComponent(pathname).replace(/^\/+/, "");
   const filePath = path.normalize(path.join(publicDir, cleanPath));
 
-  if (!filePath.startsWith(publicDir)) {
+  if (!filePath.startsWith(publicDir + path.sep) && filePath !== publicDir) {
     return sendJson(res, 403, { ok: false, error: "Forbidden" });
   }
 
