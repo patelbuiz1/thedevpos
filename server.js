@@ -59,7 +59,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Dev's POS website is running at http://localhost:${PORT}`);
-  console.log("Submit the form to test database saving and notification hooks.");
+  console.log("Submit the form to test email delivery and notification hooks.");
 });
 
 function loadEnv(filePath) {
