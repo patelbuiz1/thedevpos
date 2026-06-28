@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: thedevpos
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: OWNER_EMAIL
+        value: patelbuiz1@gmail.com
+      - key: OWNER_PHONE
+        value: "+19049087030"
+      - key: RESEND_FROM
+        value: "Dev's POS <onboarding@resend.dev>"
+      - key: RESEND_API_KEY
+        sync: false

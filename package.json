@@ -1,0 +1,10 @@
+{
+  "name": "dev-pos-funnel",
+  "version": "1.0.0",
+  "description": "Dev's POS sales funnel website with enquiry backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --use-system-ca server.js"
+  },
+  "private": true
+}
